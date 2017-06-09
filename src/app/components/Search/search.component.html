@@ -1,1 +1,7 @@
-Search
+<h1>Looking For Music?</h1>
+<p class="lead">Use Spotify AP to browse new releases and find music that you would like</p>
+<form>
+  <div class="form-group">
+      <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()" class="form-control">
+  </div>
+</form>

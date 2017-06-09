@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   selector: 'app-search',
   templateUrl: './search.component.html',
 })
-export class SearchComponent { }
+export class SearchComponent {
+  searchStr: string;
+
+  searchMusic() {
+    console.log(this.searchStr);
+  };
+}

@@ -18,9 +18,9 @@ Users can also preview songs
 
 ## TODO
 
-- Web page design
+~~- Web page design~~
 - Integrate API
-- Search component
+~~- Search component~~
 - Search Results Display
 - Artist Component
 - Artist Songs and Albums Display
@@ -46,4 +46,4 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License
