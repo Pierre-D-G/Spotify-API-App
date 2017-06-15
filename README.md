@@ -26,6 +26,16 @@ Users can also preview songs
 - Artist Songs and Albums Display
 - Album Component
 
+## Getting Started
+
+Download or clone the repository `https://github.com/Pierre-D-G/Spotify-API-App.git`
+
+Run `npm install` to install required dependancies
+
+Create a application at `https://developer.spotify.com/my-applications`.You will recieve a client id and client secret for your application
+
+Add your client id and secret to `environment.ts` at `src/enviroments/`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
