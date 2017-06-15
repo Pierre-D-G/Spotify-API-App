@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // clientKey: <YOUR CLIENT ID> EXAMPLE: 'YYYYYYYYYYYY',
+  // clientSecret: <YOUR CLIENT SECRET> EXAMPLE: 'xxxxxxxxxxxxxxxxxxxx'
 };

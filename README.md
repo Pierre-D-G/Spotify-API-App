@@ -1,6 +1,6 @@
 
 # Spotify-API-App
-Angular app which utilizes the Spofiy WEB API to allow users to search for music
+Angular app which utilizes the Spotify WEB API to allow users to search for music
 
 ## Project
 
