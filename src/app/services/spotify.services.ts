@@ -27,9 +27,11 @@ export class SpotifyService {
       .map(res => res.json());
 
   }
-  searchMusic(str: string, type = 'artist') {
+  searchMusic(str: string, type = 'artist', authToken: string) {
+    let headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + authToken);
     this.searchUrl = 'https://api.spotify.com/v1/search?query=' + str + '&offset=0&limit=20&type=' + type + '&market=US';
-    return this._http.get(this.searchUrl)
+    return this._http.get(this.searchUrl, {headers: headers})
       .map(res => res.json());
   }
 }

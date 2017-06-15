@@ -14,10 +14,12 @@ export class SearchComponent {
 
   }
   searchMusic() {
-    this._spotifyService.searchMusic(this.searchStr)
-      .subscribe(res => {
-        console.log(res.artists.items)
-      })
+    this._spotifyService.getAuth()
+      .subscribe(res => this._spotifyService.searchMusic(this.searchStr, 'artist', res.access_token)
+        .subscribe( res => {
+          console.log(res.artists)
+        })
+        )
   };
   getAuth() {
     this._spotifyService.getAuth().subscribe(res => {
