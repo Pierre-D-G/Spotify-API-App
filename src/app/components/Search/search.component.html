@@ -2,7 +2,7 @@
   <h2 class="center aligned header">Looking For Music?</h2>
   <div class="ui form">
     <div class="ui icon fluid input">
-      <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()" placeholder="Search for Songs...">
+      <input type="text" [formControl]="query" placeholder="Search for Songs...">
       <i class="search icon"></i>
     </div>
   </div>

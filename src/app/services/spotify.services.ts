@@ -1,22 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, URLSearchParams } from '@angular/http';
 import { environment } from '../../environments/environment';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+
 
 @Injectable()
 export class SpotifyService {
   private searchUrl: string;
-  private clientKey: string = environment.clientKey;
+  private clientId: string = environment.clientId;
   private clientSecret: string = environment.clientSecret;
   private body: any;
 
 
-  constructor(private _http: Http) { }
+  constructor(private _http: Http) {}
+
 
   getAuth = () => {
 
     let headers = new Headers();
-    headers.append('Authorization', 'Basic ' + btoa(this.clientKey + ":" + this.clientSecret));
+    headers.append('Authorization', 'Basic ' + btoa(this.clientId + ":" + this.clientSecret));
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
 
     let params: URLSearchParams = new URLSearchParams();
@@ -27,10 +32,10 @@ export class SpotifyService {
       .map(res => res.json());
 
   }
-  searchMusic(str: string, type = 'artist', authToken: string) {
+  searchMusic(query: string, type = 'artist', authToken: string) {
     let headers = new Headers();
     headers.append('Authorization', 'Bearer ' + authToken);
-    this.searchUrl = 'https://api.spotify.com/v1/search?query=' + str + '&offset=0&limit=20&type=' + type + '&market=US';
+    this.searchUrl = 'https://api.spotify.com/v1/search?query=' + query + '&offset=0&limit=20&type=' + type + '&market=US';
     return this._http.get(this.searchUrl, {headers: headers})
       .map(res => res.json());
   }
