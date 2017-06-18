@@ -18,13 +18,16 @@ Users can also preview songs
 
 ## TODO
 
-~~- Web page design~~
-- Integrate API
-~~- Search component~~
-- Search Results Display
-- Artist Component
-- Artist Songs and Albums Display
-- Album Component
+~~* Web page design~~
+
+* Integrate API
+
+~~* Search component~~
+
+* Search Results Display
+* Artist Component
+* Artist Songs and Albums Display
+* Album Component
 
 ## Getting Started
 
