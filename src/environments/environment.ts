@@ -7,4 +7,6 @@ export const environment = {
   production: false,
   // clientId: <YOUR CLIENT ID> EXAMPLE: 'YYYYYYYYYYYY',
   // clientSecret: <YOUR CLIENT SECRET> EXAMPLE: 'xxxxxxxxxxxxxxxxxxxx'
+  clientId: '0b9b9c9c54334bd79fb8684c7a77c61c',
+  clientSecret: 'f9e31fd3906f4211be2c22118e7a80e1'
 };

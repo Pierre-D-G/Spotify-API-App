@@ -4,6 +4,6 @@ export class Artist {
   id: number;
   name: string;
   genre: any;
-  ablums: Album[];
+  albums: Album[];
 
 }
