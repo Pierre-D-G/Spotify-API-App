@@ -19,12 +19,13 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
     this.query.valueChanges
-      .debounceTime(1000)
+      .debounceTime(400)
       .distinctUntilChanged()
       .subscribe(query => this._spotifyService.getAuth()
         .subscribe(res => this._spotifyService.searchMusic(query, 'artist', res.access_token).subscribe(
           res => {
-            this.results = res.artists
+            console.log(res.artists.items)
+            this.results = res.artists.items
           })
         ));
   }
