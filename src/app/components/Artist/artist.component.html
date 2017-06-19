@@ -1,7 +1,19 @@
-<p>
-  artist works!
-</p>
-
 <div *ngIf="artist">
-  <p>{{artist.name}}</p>
+  <div class="ui inverted segment">
+    <div class="ui fluid card">
+      <div class="image">
+        <div *ngIf="artist.images.length > 0">
+          <img class="ui centered image" src="{{artist.images[0].url}}" height="300px" width="613px">
+        </div>
+      </div>
+      <div class="content">
+        <h4 class="ui inverted centered block medium header">{{artist.name}}</h4>
+        <div class="ui horizontal list" *ngFor="let album of albums">
+          <div class="item">
+            {{album.name}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
