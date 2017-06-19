@@ -10,12 +10,13 @@ import 'rxjs/add/operator/distinctUntilChanged';
 @Injectable()
 export class SpotifyService {
   private searchUrl: string;
+  private artistUrl: string;
   private clientId: string = environment.clientId;
   private clientSecret: string = environment.clientSecret;
   private body: any;
 
 
-  constructor(private _http: Http) {}
+  constructor(private _http: Http) { }
 
 
   getAuth = () => {
@@ -35,8 +36,19 @@ export class SpotifyService {
   searchMusic(query: string, type = 'artist', authToken: string) {
     let headers = new Headers();
     headers.append('Authorization', 'Bearer ' + authToken);
+
     this.searchUrl = 'https://api.spotify.com/v1/search?query=' + query + '&offset=0&limit=20&type=' + type + '&market=US';
-    return this._http.get(this.searchUrl, {headers: headers})
+
+    return this._http.get(this.searchUrl, { headers: headers })
+      .map(res => res.json());
+  }
+  getArtist(id: string, authToken: string) {
+    let headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + authToken);
+
+    this.artistUrl = 'https://api.spotify.com/v1/artists/' + id;
+
+    return this._http.get(this.artistUrl, { headers: headers })
       .map(res => res.json());
   }
 }
