@@ -1,16 +1,32 @@
 <div *ngIf="artist">
-  <div class="ui inverted segment">
-    <div class="ui fluid card">
-      <div class="image">
-        <div *ngIf="artist.images.length > 0">
-          <img class="ui centered image" src="{{artist.images[0].url}}" height="300px" width="613px">
-        </div>
+  <div class="ui fluid card">
+    <div class="image">
+      <div *ngIf="artist.images.length > 0">
+        <img class="image" src="{{artist.images[0].url}}" height="300px" width="100%">
       </div>
-      <div class="content">
-        <h4 class="ui inverted centered block medium header">{{artist.name}}</h4>
-        <div class="ui horizontal list" *ngFor="let album of albums">
-          <div class="item">
-            {{album.name}}
+    </div>
+    <div class="content">
+      <h4 class="ui centered block medium header">{{artist.name}}</h4>
+
+      <div class="ui center aligned labels">
+        <div class="ui blue label">Followers: {{artist.followers.total}}</div>
+        <div class="ui green label">Popularity: {{artist.popularity}}</div>
+      </div>
+
+      <div class="ui center aligned labels" *ngIf="artist.genres.length > 0">
+        <div class="ui label" *ngFor="let genre of artist.genres">{{genre}}</div>
+      </div>
+
+      <div class="ui hidden divider"></div>
+
+      <div class="ui three stackable cards">
+        <div class="card" *ngFor="let album of albums">
+          <div *ngIf="album.images.length > 0" class="image">
+            <img class="image" src="{{album.images[0].url}}">
+          </div>
+          <div class="content">
+            <h1 class="ui centered medium header">{{album.name}}</h1>
+            <a class="ui fluid scheme-button button" href="">View Album</a>
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 export class SpotifyService {
   private searchUrl: string;
   private artistUrl: string;
+  private albumsUrl: string;
   private clientId: string = environment.clientId;
   private clientSecret: string = environment.clientSecret;
   private body: any;
@@ -49,6 +50,15 @@ export class SpotifyService {
     this.artistUrl = 'https://api.spotify.com/v1/artists/' + id;
 
     return this._http.get(this.artistUrl, { headers: headers })
+      .map(res => res.json());
+  }
+  getAlbums(id: string, authToken: string) {
+    let headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + authToken);
+
+    this.albumsUrl = 'https://api.spotify.com/v1/artists/' + id + '/albums?market=US&album_type=single';
+
+    return this._http.get(this.albumsUrl, { headers: headers })
       .map(res => res.json());
   }
 }

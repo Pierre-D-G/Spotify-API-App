@@ -3,7 +3,10 @@ body {
     background: url(/assets/public/images/spotify-banner.jpg) center center fixed no-repeat;
     background-size: cover;
     height: 100%;
-    color: #fff;
+}
+
+.main {
+  color: #fff;
 }
 
 .result{
@@ -12,6 +15,10 @@ body {
 
 .scheme{
   color: #669CAD;
+}
+
+.scheme-button{
+  background-color: #669CAD !important;
 }
 
 .main{
