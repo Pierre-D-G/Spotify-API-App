@@ -24,10 +24,12 @@ Users can also preview songs
 
 ~~* Search component~~
 
-* Search Results Display
-* Artist Component
-* Artist Songs and Albums Display
+* ~~Search Results Display~~
+* ~~Artist Component~~
+* ~~Artist Data and Albums Display~~
 * Album Component
+* Album Tracks Display
+* Preview Tracks
 
 ## Getting Started
 
