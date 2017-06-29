@@ -18,11 +18,11 @@ Users can also preview songs
 
 ## TODO
 
-~~* Web page design~~
+* ~~Web page design~~
 
-* Integrate API
+* ~~Integrate API~~
 
-~~* Search component~~
+* ~~Search component~~
 
 * ~~Search Results Display~~
 * ~~Artist Component~~
