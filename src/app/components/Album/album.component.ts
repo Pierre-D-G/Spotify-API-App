@@ -9,7 +9,6 @@ import { Album } from '../../models/Album';
 @Component({
   selector: 'app-album',
   templateUrl: './album.component.html',
-  styleUrls: ['./album.component.css'],
   providers: [SpotifyService]
 })
 export class AlbumComponent implements OnInit {

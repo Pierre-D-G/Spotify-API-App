@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  // clientId: <YOUR CLIENT ID> EXAMPLE: 'YYYYYYYYYYYY',
-  // clientSecret: <YOUR CLIENT SECRET> EXAMPLE: 'xxxxxxxxxxxxxxxxxxxx'
+   clientId: <YOUR CLIENT ID> EXAMPLE: 'YYYYYYYYYYYY',
+   clientSecret: <YOUR CLIENT SECRET> EXAMPLE: 'xxxxxxxxxxxxxxxxxxxx'
 };

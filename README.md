@@ -27,9 +27,9 @@ Users can also preview songs
 * ~~Search Results Display~~
 * ~~Artist Component~~
 * ~~Artist Data and Albums Display~~
-* Album Component
-* Album Tracks Display
-* Preview Tracks
+* ~~Album Component~~
+* ~~Album Tracks Display~~
+* ~~Preview Tracks~~
 
 ## Getting Started
 
